@@ -39,6 +39,6 @@ jobs:
           sudo apt-get install libopenbabel-dev
           sudo apt-get install libeigen3-dev
       - name: Install ChemmineOB
-        run: Rscript -e 'install.packages("pak"); pak::pak("ChemmineOB")'
+        run: Rscript -e 'install.packages("pak"); pak::pak(c("ChemmineOB", "ChemmineR"))'
 
       - run: Rscript test.R
